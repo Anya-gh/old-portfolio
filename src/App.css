@@ -1,0 +1,14 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  background: black;
+  color: white;
+  background-size: 100%;
+  opacity: 1;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0
+}
