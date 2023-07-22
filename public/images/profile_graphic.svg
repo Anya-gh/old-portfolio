@@ -1,0 +1,22 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="320" height="320" fill="black"/>
+<rect width="64" height="64" rx="32" fill="white"/>
+<rect x="128" width="64" height="64" rx="32" fill="white"/>
+<rect x="256" width="64" height="64" rx="32" fill="white"/>
+<rect y="128" width="64" height="64" rx="32" fill="white"/>
+<rect x="128" y="128" width="64" height="64" rx="32" fill="white"/>
+<rect x="256" y="128" width="64" height="64" rx="32" fill="white"/>
+<rect y="256" width="64" height="64" rx="32" fill="white"/>
+<rect x="128" y="256" width="64" height="64" rx="32" fill="white"/>
+<rect x="256" y="256" width="64" height="64" rx="32" fill="white"/>
+<line x1="191.646" y1="255.646" x2="255.646" y2="191.646" stroke="white"/>
+<line x1="63.6464" y1="255.646" x2="127.646" y2="191.646" stroke="white"/>
+<line x1="191.646" y1="127.646" x2="255.646" y2="63.6465" stroke="white"/>
+<line x1="63.6464" y1="191.646" x2="191.646" y2="63.6464" stroke="white"/>
+<line x1="127.646" y1="255.646" x2="255.646" y2="127.646" stroke="white"/>
+<line x1="63.6464" y1="127.646" x2="127.646" y2="63.6465" stroke="white"/>
+<path d="M33 163C161 163 161 228.5 161 292" stroke="white"/>
+<path d="M161 34C288 34 288 98.4845 288 161" stroke="white"/>
+<path d="M161 292C288 292 288 224.977 288 160" stroke="white"/>
+<path d="M160 32C33 32 33 96.9922 33 160" stroke="white"/>
+</svg>

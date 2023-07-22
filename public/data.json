@@ -1,0 +1,67 @@
+{
+  "projects" : [{
+    "id": 0,
+    "title": "Fighting Game Analysis Engine",
+    "keywords": ["MACHINE LEARNING", "PYTHON", "ALGORITHM DESIGN"],
+    "date": "3rd year (2021)",
+    "role": "",
+    "github": "",
+    "description": "Analysis engines are tools to get better at games; each action is given a score, which lets players identify their mistakes (if an action they made has a poor score, then it's a mistake), and shows them what they should have done instead. These are very common in chess, but I wanted to apply them to my favourite genre: fighting games. Many people like the idea of fighting games but struggle to get started due to the high barrier of entry in terms of difficulty, and I wanted to use this as a means to help those players. The game I picked to develop it for was Guilty Gear Strive. \n Fighting games don't have turns, but actions can be still be thought of as objectively `good` or `bad`, albeit with less certainty."
+  },
+  {
+    "id": 1,
+    "title": "Music humanisation",
+    "keywords": ["MACHINE LEARNING", "PYTHON", "PYTORCH"],
+    "date": "4th year (2022)",
+    "role": "Project manager and software engineer",
+    "github": "https://github.com/Anya-gh/CS407-Music-Humanisation",
+    "description": "Music generation is a popular field, and much has been done to create AI music already. My group and I wanted to tackle the task of playback; computer playback still lags far behind human performance, and lacks the same degree of emotion and expression. The task was thus as follows: given a score for some piece, play the piece back as a human would, with additional, optional instructions, such as Allegro (to play lively; latin words like this can often be found as annotations on sheet music)."
+  },
+  {
+    "id": 2,
+    "title": "Live conference review tool",
+    "keywords": ["REACT", "SQL", "PYTHON", "WEB DEVELOPMENT"],
+    "date": "2nd year (2020)",
+    "role": "Project manager",
+    "github": "https://github.com/Anya-gh/cs261",
+    "description": "Working with a group of other students, our task was to create a tool that conference speakers and attendees could use to view or give feedback respectively, to be implemented as a web application. The feedback needed to be available in real time; for instance, if the speaker was not loud enough, the tool would allow attendees to communicate this to the speaker, who could fix this is in real time. Functionality to give more detailed feedback in post was also required. Finally, it was necessary to store given feedback, to allow the speaker to review how their conference went after it was completed. This meant implementing a database that could communicate with the front-end."
+  },
+  {
+    "id": 3,
+    "title": "Multi-threaded packet sniffer",
+    "keywords": ["C"],
+    "date": "2nd year (2020)",
+    "role": "",
+    "github": "",
+    "description": "This project was part of a course on learning C, and combining that with basic knowledge of networking. The problem involved defending against different networking attacks, such as SYN attacks and ARP cache poisoning."
+  },
+  {
+    "id": 4,
+    "title": "Personal portfolio",
+    "keywords": ["REACT", "TYPESCRIPT", "TAILWIND", "FRAMER MOTION", "WEB DEVELOPMENT"],
+    "date": "Post university (2023)",
+    "role": "",
+    "github": "https://github.com/Anya-gh/personal_v2",
+    "description": "The very website you're on now! It was built from scratch using Vite, and developed with React, Typescript, Tailwind and Framer Motion. I built this website to learn the web development technologies I was interested in, as well as have a more presentable platform to describe myself and the things I've worked on or achieved. This will continue to be a work-in-progress, as I find new things that look interesting or want to try. If you have any suggestions, let me know!"
+  }],
+  "education" : [{
+    "id": 0,
+    "title": "University of Warwick",
+    "qualification": "Undergraduate degree",
+    "date": "2019-2022",
+    "grades": "First Class",
+    "courses": ["Computer Science MEng"]
+  },
+  {
+    "id": 1,
+    "title": "Northampton School for Boys",
+    "qualification": "A-levels",
+    "date": "2017-2019",
+    "grades": "A*, A*, A*",
+    "courses": ["Maths, Further Maths, Computing"]
+  }],
+  "tags" : {
+    "headers": [{"name": "WEB DEVELOPMENT", "color":"bg-fuchsia-500"}, {"name": "MACHINE LEARNING", "color": "bg-indigo-500"}, {"name": "DATA PROCESSING", "color": "bg-sky-500"}, {"name": "ALGORITHM DESIGN", "color": "bg-teal-500"}],
+    "tools": [{"name": "REACT", "color": "bg-fuchsia-500"}, {"name": "TYPESCRIPT", "color": "bg-fuchsia-500"}, {"name": "TAILWIND", "color": "bg-fuchsia-500"}, {"name": "PYTHON", "color": "bg-indigo-500"}, {"name": "PYTORCH", "color": "bg-indigo-500"}, {"name": "PANDAS", "color": "bg-sky-500"}, {"name": "NUMPY", "color": "bg-sky-500"}, {"name": "SQL", "color": "bg-sky-500"}, {"name": "C", "color": "bg-sky-500"}]
+  }
+}
