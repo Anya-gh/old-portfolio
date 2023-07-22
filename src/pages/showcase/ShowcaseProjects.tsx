@@ -1,7 +1,9 @@
 import { useState, Dispatch, SetStateAction, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Tag from '../../components/Tag'
-import * as data from '../../../public/data.json'
+import * as data from '../../data.json'
+import github_icon from '../../images/github-mark-white.png'
+import chevron from '../../images/down.png'
 
 
 const projects = data['projects']
@@ -19,12 +21,11 @@ export type Projects = {
 
 interface ShowcaseProjectsProps {
   filteredTags: string[],
-  setFilteredTags: Dispatch<SetStateAction<string[]>>,
   filteredProjects: Projects[],
   setFilteredProjects: Dispatch<SetStateAction<Projects[]>>
 }
 
-export default function ShowcaseProjects( {filteredTags, setFilteredTags, filteredProjects, setFilteredProjects} : ShowcaseProjectsProps ) {
+export default function ShowcaseProjects( {filteredTags, filteredProjects, setFilteredProjects} : ShowcaseProjectsProps ) {
 
   const [active, setActive] = useState(0)
   const [direction, setDirection] = useState(1)
@@ -84,14 +85,14 @@ export default function ShowcaseProjects( {filteredTags, setFilteredTags, filter
   return (
     <>
     <div className="pb-20 flex flex-row pt-10 self-center justify-evenly items-center overflow-hidden w-full">
-      <button onClick={onClickLeft}><img className="invert m-0 w-auto h-10 rotate-90 hover:scale-150 hover:cursor-pointer transition duration-200" src={'../../images/down.png'} alt={'chevron'}/></button>
+      <button onClick={onClickLeft}><img className="invert m-0 w-auto h-10 rotate-90 hover:scale-150 hover:cursor-pointer transition duration-200" src={chevron} alt={'chevron'}/></button>
         <div className="w-auto items-center">
         <AnimatePresence initial={false} mode='wait'>
             <motion.div key={active} variants={variants} initial={direction === 1 ? 'left' : 'right'} animate={{opacity: 1, x: 0, transition: {duration: 0.5}}} exit={direction === 1 ? "right" : "left"}>
               <div className='flex flex-col border-2 rounded-xl h-72 w-[40rem] mt-10 transition duration-200 hover:scale-105 overflow-scroll'>
                 <div className="flex flex-row justify-center items-center">
                   <h1 className="text-xl font-bold pt-2 justify-self-center">{filteredProjects[active].title}</h1>
-                  {filteredProjects[active].github != '' && <a href={filteredProjects[active].github}><img className="h-7 m-3 hover:scale-125 transition duration-200 justify-self-end" src={'../../../public/images/github-mark-white.png'} alt='github'/></a>}
+                  {filteredProjects[active].github != '' && <a href={filteredProjects[active].github}><img className="h-7 m-3 hover:scale-125 transition duration-200 justify-self-end" src={github_icon} alt='github'/></a>}
                 </div>
                 <h2 className="text-md font-bold self-center italic text-gray-400">{filteredProjects[active].date}</h2>
                 <ul className='flex flex-row my-1 self-center'>
@@ -108,7 +109,7 @@ export default function ShowcaseProjects( {filteredTags, setFilteredTags, filter
         </AnimatePresence>
         </div>   
 
-      <button onClick={onClickRight}><img className="invert m-0 -rotate-90 w-auto h-10 hover:scale-150 hover:cursor-pointer transition duration-200" src={'../../images/down.png'} alt={'chevron'}/></button>
+      <button onClick={onClickRight}><img className="invert m-0 -rotate-90 w-auto h-10 hover:scale-150 hover:cursor-pointer transition duration-200" src={chevron} alt={'chevron'}/></button>
     </div>
     </>
   )

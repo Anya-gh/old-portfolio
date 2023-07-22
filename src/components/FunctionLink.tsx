@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { Dispatch, SetStateAction, useEffect, useRef } from "react"
 import { Animator } from "./Animation"
+import chevron from '../images/down.png'
 
 interface functionProps {
   link: string,
@@ -41,7 +42,7 @@ export default function FunctionLink({link, name, exitAnimation, setExitAnimatio
 
   return (
     <>
-      <button className="flex flex-col bg-none border-none items-center self-center text-amber-400 tracking-widest font-medium transition hover:scale-105 cursor-pointer hover:brightness-125 duration-200" onClick={OnClickHandler}><p className="border-b-2 pb-2 mb-2">{name}</p><img className={"invert h-5 m-0" + direction} src={'../../images/down.png'} alt={'chevron'}/></button>
+      <button className="flex flex-col bg-none border-none items-center self-center text-amber-400 tracking-widest font-medium transition hover:scale-105 cursor-pointer hover:brightness-125 duration-200" onClick={OnClickHandler}><p className="border-b-2 pb-2 mb-2">{name}</p><img className={"invert h-5 m-0" + direction} src={chevron} alt={'chevron'}/></button>
     </>
   )
 }

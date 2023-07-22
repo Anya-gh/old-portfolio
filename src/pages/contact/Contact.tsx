@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
-import { Dispatch, SetStateAction } from 'react'
 import FunctionLink from '../../components/FunctionLink'
 import { AnimatorProps } from '../../components/Animation'
+import email_icon from '../../images/icons8-email-50.png'
+import github_icon from '../../images/github-mark-white.png'
+import linkedin_icon from '../../images/LI-In-Bug.png'
 
 function Contact( {landingAnimation, setLandingAnimation, showcaseAnimation, setShowcaseAnimation, aboutAnimation, setAboutAnimation, contactAnimation, setContactAnimation} : AnimatorProps ) {
   return (
@@ -18,9 +20,9 @@ function Contact( {landingAnimation, setLandingAnimation, showcaseAnimation, set
         <p className="text-lg leading-none">Here's where you can reach me!</p>
       </div>
       <div className='flex flex-col items-center'>
-        <Link title="Email" icon="../../../public/images/icons8-email-50.png" text="anya2718@icloud.com" link="mailto:anya2718@icloud.com"/>
-        <Link title="Github" icon="../../../public/images/github-mark-white.png" text="github.com/Anya-gh" link="github.com/Anya-gh"/>
-        <Link title="LinkedIn" icon="../../../public/images/Li-in-Bug.png" text="https://www.linkedin.com/in/aniket-singh-806b5525a/" link="https://www.linkedin.com/in/aniket-singh-806b5525a/"/>
+        <Link title="Email" icon={email_icon} text="anya2718@icloud.com" link="mailto:anya2718@icloud.com"/>
+        <Link title="Github" icon={github_icon} text="github.com/Anya-gh" link="github.com/Anya-gh"/>
+        <Link title="LinkedIn" icon={linkedin_icon} text="https://www.linkedin.com/in/aniket-singh-806b5525a/" link="https://www.linkedin.com/in/aniket-singh-806b5525a/"/>
       </div>
 
       <div className="flex flex-row justify-between">

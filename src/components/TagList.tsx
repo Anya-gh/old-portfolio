@@ -1,8 +1,7 @@
 import { Dispatch, SetStateAction } from "react"
 import { useNavigate } from "react-router-dom"
-import * as data from '../../public/data.json'
+import * as data from '../data.json'
 import Tag from "./Tag"
-import type { Projects } from "../pages/showcase/ShowcaseProjects"
 
 export type Tags = {
   headers: {color: string, name: string}[],
@@ -12,13 +11,12 @@ export type Tags = {
 interface TagListProps {
   filteredTags: string[],
   setFilteredTags: Dispatch<SetStateAction<string[]>>,
-  setFilteredProjects: Dispatch<SetStateAction<Projects[]>>,
-  redirect: boolean
+  redirect: boolean,
 }
 
 const tags = data['tags']
 
-export default function TagList( {filteredTags, setFilteredTags, setFilteredProjects, redirect} : TagListProps) {
+export default function TagList( {filteredTags, setFilteredTags, redirect} : TagListProps) {
 
   const navigate = useNavigate()
 

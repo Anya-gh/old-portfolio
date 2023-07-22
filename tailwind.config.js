@@ -6,6 +6,12 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'bg-sky-500',
+    'bg-teal-500',
+    'bg-fuchsia-500',
+    'bg-indigo-500'
+  ],
   theme: {
     extend: {
       textShadow: {

@@ -29,8 +29,8 @@ export default function Showcase( {landingAnimation, setLandingAnimation, showca
         <h1 id='showcase' className="text-9xl font-bold m-0">Projects</h1>
         <p className="text-lg leading-none m-0">{"Here are some projects I've worked on; click on a tag to filter projects."}{/*For some of my favourite projects, I have a dedicated page that you can reach by clicking on them - feel free to take a look!*/}</p>
       </div>
-      <TagList filteredTags={filteredTags} setFilteredTags={setFilteredTags} setFilteredProjects={setFilteredProjects} redirect={false}/>
-      <ShowcaseProjects filteredTags={filteredTags} setFilteredTags={setFilteredTags} filteredProjects={filteredProjects} setFilteredProjects={setFilteredProjects}/>
+      <TagList filteredTags={filteredTags} setFilteredTags={setFilteredTags} redirect={false}/>
+      <ShowcaseProjects filteredTags={filteredTags} filteredProjects={filteredProjects} setFilteredProjects={setFilteredProjects}/>
       <div className="flex flex-row justify-between">
         <FunctionLink link={'/about'} name={'ABOUT'} exitAnimation={showcaseAnimation} setExitAnimation={setShowcaseAnimation} newExit={{x: "100%", opacity: 0, transition: {duration: 0.5}}} initialAnimation={aboutAnimation} setInitialAnimation={setAboutAnimation} newInitial={{opacity: 0, x: "-100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, x: 0}} direction=" rotate-90"/>
         <FunctionLink link={'/'} name={'HOME'} exitAnimation={showcaseAnimation} setExitAnimation={setShowcaseAnimation} newExit={{y: "100%", opacity: 0, transition: {duration: 0.5}}} initialAnimation={landingAnimation} setInitialAnimation={setLandingAnimation} newInitial={{opacity: 0, y: "-100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, y: 0}} direction=" rotate-180"/>

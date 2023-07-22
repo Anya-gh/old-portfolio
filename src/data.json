@@ -62,6 +62,6 @@
   }],
   "tags" : {
     "headers": [{"name": "WEB DEVELOPMENT", "color":"bg-fuchsia-500"}, {"name": "MACHINE LEARNING", "color": "bg-indigo-500"}, {"name": "DATA PROCESSING", "color": "bg-sky-500"}, {"name": "ALGORITHM DESIGN", "color": "bg-teal-500"}],
-    "tools": [{"name": "REACT", "color": "bg-fuchsia-500"}, {"name": "TYPESCRIPT", "color": "bg-fuchsia-500"}, {"name": "TAILWIND", "color": "bg-fuchsia-500"}, {"name": "PYTHON", "color": "bg-indigo-500"}, {"name": "PYTORCH", "color": "bg-indigo-500"}, {"name": "PANDAS", "color": "bg-sky-500"}, {"name": "NUMPY", "color": "bg-sky-500"}, {"name": "SQL", "color": "bg-sky-500"}, {"name": "C", "color": "bg-sky-500"}]
+    "tools": [{"name": "REACT", "color": "bg-fuchsia-500"}, {"name": "TYPESCRIPT", "color": "bg-fuchsia-500"}, {"name": "TAILWIND", "color": "bg-fuchsia-500"}, {"name": "PYTHON", "color": "bg-indigo-500"}, {"name": "PYTORCH", "color": "bg-indigo-500"}, {"name": "SQL", "color": "bg-sky-500"}, {"name": "C", "color": "bg-sky-500"}]
   }
 }

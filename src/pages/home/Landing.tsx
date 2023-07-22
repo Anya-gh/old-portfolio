@@ -3,16 +3,19 @@ import { motion } from "framer-motion"
 import TagList from '../../components/TagList'
 import FunctionLink from "../../components/FunctionLink"
 import { AnimatorProps } from "../../components/Animation"
-import { Dispatch, SetStateAction } from "react"
-import { Projects } from "../showcase/ShowcaseProjects"
+import { Dispatch, SetStateAction, useEffect } from "react"
+import squirtle from '../../images/squirtle_shades.jpg'
 
 interface LandingProps extends AnimatorProps {
   filteredTags: string[],
   setFilteredTags: Dispatch<SetStateAction<string[]>>,
-  setFilteredProjects: Dispatch<SetStateAction<Projects[]>>
 }
 
-export default function Landing( {landingAnimation, setLandingAnimation, showcaseAnimation, setShowcaseAnimation, aboutAnimation, setAboutAnimation, contactAnimation, setContactAnimation, filteredTags, setFilteredTags, setFilteredProjects} : LandingProps) {
+export default function Landing( {landingAnimation, setLandingAnimation, showcaseAnimation, setShowcaseAnimation, aboutAnimation, setAboutAnimation, contactAnimation, setContactAnimation, filteredTags, setFilteredTags} : LandingProps) {
+
+  useEffect(() => {
+    setFilteredTags([])
+  }, [])
 
   const location = useLocation()
 
@@ -35,10 +38,10 @@ export default function Landing( {landingAnimation, setLandingAnimation, showcas
           <p className="text-3xl leading-none">Looking for work in software development.</p>
         </div>
         <div>
-          <img src={'../../images/squirtle_shades.jpg'} alt={"profile"} className="transition duration-300 hover:scale-105"/>
+          <img src={squirtle} alt={"profile"} className="transition duration-300 hover:scale-105"/>
         </div>
       </div>
-      <TagList filteredTags={filteredTags} setFilteredTags={setFilteredTags} setFilteredProjects={setFilteredProjects} redirect={true}/>
+      <TagList filteredTags={filteredTags} setFilteredTags={setFilteredTags} redirect={true}/>
       <div className="flex flex-row justify-between">
         <FunctionLink link={'/about'} name={'ABOUT'} exitAnimation={landingAnimation} setExitAnimation={setLandingAnimation} initialAnimation={aboutAnimation} setInitialAnimation={setAboutAnimation} newExit={{x: "100%", opacity: 0, transition: {duration: 0.5}}} direction=" rotate-90" newInitial={{opacity: 0, x: "-100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, x: 0}}/>
         <FunctionLink link={'/showcase'} name={'PROJECTS'} exitAnimation={landingAnimation} setExitAnimation={setLandingAnimation} initialAnimation={showcaseAnimation} setInitialAnimation={setShowcaseAnimation} newExit={{y: "-100%", opacity: 0, transition: {duration: 0.5}}} direction="" newInitial={{opacity: 0, y: "100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, y: 0}}/>

@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import FunctionLink from '../../components/FunctionLink'
 import { AnimatorProps } from '../../components/Animation'
+import grad_hat from '../../images/grad_hat.png'
+import book from '../../images/book.png'
+import sakura from '../../images/icons8-sakura-48.png'
 
 function About( {landingAnimation, setLandingAnimation, showcaseAnimation, setShowcaseAnimation, aboutAnimation, setAboutAnimation, contactAnimation, setContactAnimation} : AnimatorProps) {
   return (
@@ -20,11 +23,11 @@ function About( {landingAnimation, setLandingAnimation, showcaseAnimation, setSh
         <div className='mb-20'>
           <h1 className='font-bold text-6xl border-b-2 mb-2 w-fit'>Education</h1>
           <div className='flex flex-row justify-between mt-5 mb-5'>
-            <div><span className='flex flex-row items-center'><img src={'../../../public/images/grad_hat.png'} alt='education' className='h-10 invert mr-2'/><h2 className='font-bold text-4xl'>University of Warwick</h2></span><p className='font-bold text-xl text-slate-500'>2019-2023</p></div>
+            <div><span className='flex flex-row items-center'><img src={grad_hat} alt='education' className='h-10 invert mr-2'/><h2 className='font-bold text-4xl'>University of Warwick</h2></span><p className='font-bold text-xl text-slate-500'>2019-2023</p></div>
             <p className='text-xl'>MEng - 1st</p>
           </div>
           <div className='flex flex-row justify-between'>
-            <div><span className='flex flex-row items-center'><img src={'../../../public/images/book.png'} alt='education' className='h-10 invert mr-2'/><h2 className='font-bold text-4xl'>Northampton School for Boys</h2></span><p className='italic text-xl'>Maths, Further Maths, Computer Science</p><p className='font-bold text-xl text-slate-500'>2017 - 2019</p></div>
+            <div><span className='flex flex-row items-center'><img src={book} alt='education' className='h-10 invert mr-2'/><h2 className='font-bold text-4xl'>Northampton School for Boys</h2></span><p className='italic text-xl'>Maths, Further Maths, Computer Science</p><p className='font-bold text-xl text-slate-500'>2017 - 2019</p></div>
             <p className='text-xl'>A-Levels - A*, A*, A*</p>
           </div>
           <div className='flex flex-col'>
@@ -35,7 +38,7 @@ function About( {landingAnimation, setLandingAnimation, showcaseAnimation, setSh
         <div>
           <h1 className='font-bold text-6xl border-b-2 mb-2 w-fit'>Personal</h1>
             <div className='mt-5 mb-10'>
-              <span className='flex flex-row items-center'><img src='../../../public/images/icons8-sakura-48.png' alt='japan' className='h-10 mr-2'/><h2 className='font-bold text-4xl'>Japanese</h2></span>
+              <span className='flex flex-row items-center'><img src={sakura} alt='japan' className='h-10 mr-2'/><h2 className='font-bold text-4xl'>Japanese</h2></span>
               <p>I started learning Japanese in high school, but started taking it more seriously in university. I took two courses, one in my second year and again in my third year. I finished with my proficiency equivalent to N3 on the Japanese Language Proficiency Test (JLPT). I would have continued into my fourth year, but felt a little overwhelmed with my workload. I've now started learning it again, and hope to achieve N1 eventually.</p>
             </div>
             {/*<div className='mt-5 mb-5'>
