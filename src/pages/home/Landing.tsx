@@ -26,7 +26,7 @@ export default function Landing( {landingAnimation, setLandingAnimation, showcas
     initial={landingAnimation.initial}
     animate={landingAnimation.animate}
     exit={landingAnimation.exit}
-    className="px-60 flex flex-col justify-between h-screen py-10 overflow-hidden w-screen"
+    className="px-[17.5vw] flex flex-col justify-between h-screen py-10 overflow-hidden w-screen"
     >
       <div className="flex flex-row justify-between">
         <div className="w-96">

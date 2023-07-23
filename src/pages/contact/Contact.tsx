@@ -13,7 +13,7 @@ function Contact( {landingAnimation, setLandingAnimation, showcaseAnimation, set
     initial={contactAnimation.initial}
     animate={contactAnimation.animate}
     exit={contactAnimation.exit}
-    className='px-60 flex flex-col justify-between h-screen py-10 overflow-hidden w-screen'
+    className='px-[17.5vw] flex flex-col justify-between h-screen py-10 overflow-hidden w-screen'
     >
       <div>
         <h1 id='showcase' className="text-9xl font-bold">Contact</h1>

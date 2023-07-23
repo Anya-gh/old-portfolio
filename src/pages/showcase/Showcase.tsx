@@ -23,7 +23,7 @@ export default function Showcase( {landingAnimation, setLandingAnimation, showca
     initial={showcaseAnimation.initial}
     animate={showcaseAnimation.animate}
     exit={showcaseAnimation.exit}
-    className="px-60 flex flex-col justify-between h-screen py-10 overflow-hidden w-screen"
+    className="px-[17.5vw] flex flex-col justify-between h-screen py-10 overflow-hidden w-screen"
     >
       <div className="pb-5">
         <h1 id='showcase' className="text-9xl font-bold m-0">Projects</h1>
