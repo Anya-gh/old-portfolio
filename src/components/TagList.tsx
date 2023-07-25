@@ -31,13 +31,11 @@ export default function TagList( {filteredTags, setFilteredTags, redirect} : Tag
   return (
     <>
       <div className='flex flex-col justify-between'>
-        <ul className="flex flex-row justify-between list-none mb-3">
+        <ul className="flex flex-row items-center list-none flex-wrap self-center">
           {tags.headers.map(tag => {
             const text_color = filteredTags.includes(tag.name) ? 'brightness-125 text-white' : 'text-black'
-            return <button className= {text_color + "  transition duration-200 hover:text-white cursor-pointer hover:scale-110 active:scale-125"} key={tag.name} name={tag.name} onClick={() => onClickHandler(tag.name)}><Tag color={tag.color} name={tag.name}/></button>
+            return <button className= {text_color + " transition duration-200 hover:text-white cursor-pointer hover:scale-110 active:scale-125"} key={tag.name} name={tag.name} onClick={() => onClickHandler(tag.name)}><Tag color={tag.color} name={tag.name}/></button>
           })}
-        </ul>
-        <ul className="flex flex-row justify-between list-none">
           {tags.tools.map(tag => {const text_color = filteredTags.includes(tag.name) ? 'brightness-125 text-white' : 'text-black'
             return <button className= {text_color + " transition duration-200 hover:text-white cursor-pointer hover:scale-110 active:scale-125"} key={tag.name} onClick={() => onClickHandler(tag.name)}><Tag color={tag.color} name={tag.name}/></button>
           })}

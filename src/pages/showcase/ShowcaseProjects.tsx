@@ -84,18 +84,17 @@ export default function ShowcaseProjects( {filteredTags, filteredProjects, setFi
 
   return (
     <>
-    <div className="pb-20 flex flex-row pt-10 self-center justify-evenly items-center overflow-hidden w-full">
-      <button onClick={onClickLeft}><img className="invert m-0 w-auto h-10 rotate-90 hover:scale-150 hover:cursor-pointer transition duration-200" src={chevron} alt={'chevron'}/></button>
-        <div className="w-auto items-center">
-        <AnimatePresence initial={false} mode='wait'>
-            <motion.div key={active} variants={variants} initial={direction === 1 ? 'left' : 'right'} animate={{opacity: 1, x: 0, transition: {duration: 0.5}}} exit={direction === 1 ? "right" : "left"}>
-              <div className='flex flex-col border-2 rounded-xl h-72 w-[40rem] mt-10 transition duration-200 hover:scale-105 overflow-scroll'>
-                <div className="flex flex-row justify-center items-center">
-                  <h1 className="text-xl font-bold pt-2 justify-self-center">{filteredProjects[active].title}</h1>
-                  {filteredProjects[active].github != '' && <a href={filteredProjects[active].github}><img className="h-7 m-3 hover:scale-125 transition duration-200 justify-self-end" src={github_icon} alt='github'/></a>}
+    <div className="flex flex-row justify-center items-center h-full w-full overflow-hidden m-10">
+      <button onClick={onClickLeft}><img className="invert h-10 rotate-90 hover:scale-150 hover:cursor-pointer transition duration-200 md:pr-10" src={chevron} alt={'chevron'}/></button>
+        <div className='flex flex-col border-2 rounded-xl transition duration-200 hover:scale-105 overflow-scroll h-full w-full m-5 md:w-[40rem] md:h-80'>
+          <AnimatePresence initial={false} mode='wait'>
+            <motion.div key={active} variants={variants} initial={direction === 1 ? 'left' : 'right'} animate={{opacity: 1, x: 0, transition: {duration: 0.5}}} exit={direction === 1 ? "right" : "left"} className='p-2'>
+                <div className="flex flex-row justify-between items-center pt-2">
+                  <h1 className="font-bold md:text-xl">{filteredProjects[active].title}</h1>
+                  {filteredProjects[active].github != '' && <a href={filteredProjects[active].github}><img className="h-7 mr-5 hover:scale-125 transition duration-200" src={github_icon} alt='github'/></a>}
                 </div>
-                <h2 className="text-md font-bold self-center italic text-gray-400">{filteredProjects[active].date}</h2>
-                <ul className='flex flex-row my-1 self-center'>
+                <h2 className="text-sm font-bold self-center italic text-gray-400 md:text-base">{filteredProjects[active].date}</h2>
+                <ul className='flex flex-row my-1 self-center flex-wrap'>
                 {tags.headers.filter(tag => filteredProjects[active].keywords.includes(tag.name)).map(tag => {
                   return <Tag key={tag.name} color={tag.color} name={tag.name}/>
                 })}
@@ -103,13 +102,12 @@ export default function ShowcaseProjects( {filteredTags, filteredProjects, setFi
                   return <Tag key={tag.name} color={tag.color} name={tag.name}/>
                 })}
                 </ul>
-                <p className="p-2">{filteredProjects[active].description}</p>
-              </div>
+                <p className="text-xs md:text-base">{filteredProjects[active].description}</p>
             </motion.div>
-        </AnimatePresence>
+          </AnimatePresence>
         </div>   
 
-      <button onClick={onClickRight}><img className="invert m-0 -rotate-90 w-auto h-10 hover:scale-150 hover:cursor-pointer transition duration-200" src={chevron} alt={'chevron'}/></button>
+      <button onClick={onClickRight}><img className="invert h-10 -rotate-90 hover:scale-150 hover:cursor-pointer transition duration-200 md:pl-10" src={chevron} alt={'chevron'}/></button>
     </div>
     </>
   )

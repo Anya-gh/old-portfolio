@@ -42,7 +42,7 @@ export default function FunctionLink({link, name, exitAnimation, setExitAnimatio
 
   return (
     <>
-      <button className="flex flex-col bg-none border-none items-center self-center text-amber-400 tracking-widest font-medium transition hover:scale-105 cursor-pointer hover:brightness-125 duration-200" onClick={OnClickHandler}><p className="border-b-2 pb-2 mb-2">{name}</p><img className={"invert h-5 m-0" + direction} src={chevron} alt={'chevron'}/></button>
+      <button className="flex flex-col bg-none border-none items-center self-center text-amber-400 tracking-widest font-medium transition hover:scale-105 cursor-pointer hover:brightness-125 duration-200 text-xs" onClick={OnClickHandler}><p className="w-20 border-b-2 pb-2 mb-2">{name}</p><img className={"invert h-5 m-0" + direction} src={chevron} alt={'chevron'}/></button>
     </>
   )
 }
