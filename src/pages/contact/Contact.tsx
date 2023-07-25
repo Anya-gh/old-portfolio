@@ -13,11 +13,11 @@ function Contact( {landingAnimation, setLandingAnimation, showcaseAnimation, set
     initial={contactAnimation.initial}
     animate={contactAnimation.animate}
     exit={contactAnimation.exit}
-    className='px-[17.5vw] flex flex-col justify-between h-screen py-10 overflow-hidden w-screen'
+    className="h-screen overflow-hidden w-screen p-6 flex flex-col justify-between items-center"
     >
-      <div>
-        <h1 id='showcase' className="text-9xl font-bold">Contact</h1>
-        <p className="text-lg leading-none">Here's where you can reach me!</p>
+      <div className='md:w-[50rem] md:px-10'>
+        <h1 className="text-6xl font-bold md:text-9xl">Contact</h1>
+        <p className="leading-none ">If you want to talk about anything at all, don't hesitate to get in touch!</p>
       </div>
       <div className='flex flex-col items-center'>
         <Link title="Email" icon={email_icon} text="anya2718@icloud.com" link="mailto:anya2718@icloud.com"/>
@@ -25,7 +25,7 @@ function Contact( {landingAnimation, setLandingAnimation, showcaseAnimation, set
         <Link title="LinkedIn" icon={linkedin_icon} text="https://www.linkedin.com/in/aniket-singh-806b5525a/" link="https://www.linkedin.com/in/aniket-singh-806b5525a/"/>
       </div>
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between md:px-10 md:w-[50rem] w-full">
         <FunctionLink link={'/'} name={'HOME'} exitAnimation={contactAnimation} setExitAnimation={setContactAnimation} newExit={{x: "100%", opacity: 0, transition: {duration: 0.5}}} initialAnimation={landingAnimation} setInitialAnimation={setLandingAnimation} newInitial={{opacity: 0, x: "-100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, x: 0}} direction=" rotate-90"/>
         <FunctionLink link={'/showcase'} name={'PROJECTS'} exitAnimation={contactAnimation} setExitAnimation={setContactAnimation} newExit={{y: "-100%", opacity: 0, transition: {duration: 0.5}}} initialAnimation={showcaseAnimation} setInitialAnimation={setShowcaseAnimation} newInitial={{opacity: 0, y: "100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, y: 0}} direction=""/>
         <FunctionLink link={'/about'} name={'ABOUT'} exitAnimation={contactAnimation} setExitAnimation={setContactAnimation} newExit={{x: "-100%", opacity: 0, transition: {duration: 0.5}}} initialAnimation={aboutAnimation} setInitialAnimation={setAboutAnimation} newInitial={{opacity: 0, x: "100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, x: 0}} direction=" -rotate-90"/>
@@ -44,12 +44,12 @@ interface LinkProps {
 
 const Link = ( {title, icon, link, text} : LinkProps) => {
   return (<>
-    <a href={link}><div className='h-20 w-[30rem] border-2 rounded-xl items-center flex flex-col opacity-70 hover:opacity-100 hover:scale-110 transition duration-200 my-5'>
+    <a href={link}><div className='h-24 w-60 border-2 rounded-xl justify-center items-center flex flex-col opacity-70 hover:opacity-100 hover:scale-110 transition duration-200 my-5 md:w-[30rem]'>
       <div className='flex flex-row items-center mt-2'>
         <img src={icon} alt={title} className='h-8'/>
         <h1 className='font-bold text-3xl mx-2'>{title}</h1>
       </div>
-      <p>{text}</p>
+      <p className='text-xs px-2'>{text}</p>
     </div></a>
   </>)
   
