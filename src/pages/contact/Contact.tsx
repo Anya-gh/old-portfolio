@@ -44,7 +44,7 @@ interface LinkProps {
 
 const Link = ( {title, icon, link, text} : LinkProps) => {
   return (<>
-    <a href={link}><div className='h-24 w-60 border-2 rounded-xl justify-center items-center flex flex-col opacity-70 hover:opacity-100 hover:scale-110 transition duration-200 my-5 md:w-[30rem]'>
+    <a href={link}><div className='h-24 w-60 border-2 rounded-xl justify-center items-center flex flex-col opacity-70 lg:hover:opacity-100 lg:hover:scale-110 transition duration-200 my-5 md:w-[30rem]'>
       <div className='flex flex-row items-center mt-2'>
         <img src={icon} alt={title} className='h-8'/>
         <h1 className='font-bold text-3xl mx-2'>{title}</h1>

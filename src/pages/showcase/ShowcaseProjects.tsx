@@ -86,12 +86,12 @@ export default function ShowcaseProjects( {filteredTags, filteredProjects, setFi
     <>
     <div className="flex flex-row justify-center items-center h-full w-full overflow-hidden m-10">
       <button onClick={onClickLeft}><img className="invert h-10 rotate-90 hover:scale-150 hover:cursor-pointer transition duration-200 md:pr-10" src={chevron} alt={'chevron'}/></button>
-        <div className='flex flex-col border-2 rounded-xl transition duration-200 hover:scale-105 overflow-scroll h-full w-full m-5 md:w-[40rem] md:h-80'>
+        <div className='flex flex-col border-2 rounded-xl transition duration-200 lg:hover:scale-105 overflow-scroll h-full w-full m-5 md:w-[40rem] md:h-80 px-4 pb-4'>
           <AnimatePresence initial={false} mode='wait'>
             <motion.div key={active} variants={variants} initial={direction === 1 ? 'left' : 'right'} animate={{opacity: 1, x: 0, transition: {duration: 0.5}}} exit={direction === 1 ? "right" : "left"} className='p-2'>
                 <div className="flex flex-row justify-between items-center pt-2">
                   <h1 className="font-bold md:text-xl">{filteredProjects[active].title}</h1>
-                  {filteredProjects[active].github != '' && <a href={filteredProjects[active].github}><img className="h-7 mr-5 hover:scale-125 transition duration-200" src={github_icon} alt='github'/></a>}
+                  {filteredProjects[active].github != '' && <a href={filteredProjects[active].github}><img className="h-7 mr-5 lg:hover:scale-110 transition duration-200" src={github_icon} alt='github'/></a>}
                 </div>
                 <h2 className="text-sm font-bold self-center italic text-gray-400 md:text-base">{filteredProjects[active].date}</h2>
                 <ul className='flex flex-row my-1 self-center flex-wrap'>

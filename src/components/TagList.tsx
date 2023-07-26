@@ -33,11 +33,12 @@ export default function TagList( {filteredTags, setFilteredTags, redirect} : Tag
       <div className='flex flex-col justify-between'>
         <ul className="flex flex-row items-center list-none flex-wrap self-center">
           {tags.headers.map(tag => {
-            const text_color = filteredTags.includes(tag.name) ? 'brightness-125 text-white' : 'text-black'
-            return <button className= {text_color + " transition duration-200 hover:text-white cursor-pointer hover:scale-110 active:scale-125"} key={tag.name} name={tag.name} onClick={() => onClickHandler(tag.name)}><Tag color={tag.color} name={tag.name}/></button>
+            const color =  filteredTags.includes(tag.name) ? tag.color + ' brightness-150 text-white' : tag.color + ' text-black'
+            return <button className= "transition ease-in-out duration-200 lg:hover:text-white cursor-pointer lg:hover:scale-110 active:scale-125" key={tag.name} name={tag.name} onClick={() => onClickHandler(tag.name)}><Tag color={color} name={tag.name}/></button>
           })}
-          {tags.tools.map(tag => {const text_color = filteredTags.includes(tag.name) ? 'brightness-125 text-white' : 'text-black'
-            return <button className= {text_color + " transition duration-200 hover:text-white cursor-pointer hover:scale-110 active:scale-125"} key={tag.name} onClick={() => onClickHandler(tag.name)}><Tag color={tag.color} name={tag.name}/></button>
+          {tags.tools.map(tag => {
+            const color =  filteredTags.includes(tag.name) ? tag.color + ' brightness-150 text-white' : tag.color + ' text-black'
+            return <button className="transition ease-in-out duration-200 lg:hover:text-white cursor-pointer lg:hover:scale-110 active:scale-125" key={tag.name} onClick={() => onClickHandler(tag.name)}><Tag color={color} name={tag.name}/></button>
           })}
         </ul>
       </div>
