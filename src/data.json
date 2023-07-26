@@ -2,7 +2,7 @@
   "projects" : [{
     "id": 0,
     "title": "Fighting Game Analysis Engine",
-    "keywords": ["MACHINE LEARNING", "PYTHON", "ALGORITHM DESIGN"],
+    "keywords": ["MACHINE LEARNING", "PYTHON", "ALGORITHM DESIGN", "DATA PROCESSING"],
     "date": "3rd year (2021)",
     "role": "",
     "github": "",
@@ -11,7 +11,7 @@
   {
     "id": 1,
     "title": "Music humanisation",
-    "keywords": ["MACHINE LEARNING", "PYTHON", "PYTORCH"],
+    "keywords": ["MACHINE LEARNING", "PYTHON", "PYTORCH", "DATA PROCESSING"],
     "date": "4th year (2022)",
     "role": "Project manager and software engineer",
     "github": "https://github.com/Anya-gh/CS407-Music-Humanisation",
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "title": "Live conference review tool",
-    "keywords": ["REACT", "SQL", "PYTHON", "WEB DEVELOPMENT"],
+    "keywords": ["REACT", "SQL", "PYTHON", "WEB DEVELOPMENT", "DATA PROCESSING"],
     "date": "2nd year (2020)",
     "role": "Project manager",
     "github": "https://github.com/Anya-gh/cs261",
@@ -29,7 +29,7 @@
   {
     "id": 3,
     "title": "Multi-threaded packet sniffer",
-    "keywords": ["C"],
+    "keywords": ["C", "DATA PROCESSING"],
     "date": "2nd year (2020)",
     "role": "",
     "github": "",
