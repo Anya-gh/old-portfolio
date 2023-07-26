@@ -23,11 +23,11 @@ function About( {landingAnimation, setLandingAnimation, showcaseAnimation, setSh
         <div className='mb-20'>
           <h1 className='font-bold text-3xl border-b-2 mb-2 w-fit md:text-6xl'>Education</h1>
           <div className='flex flex-row justify-between mt-5 mb-5'>
-            <div><span className='flex flex-row items-center'><img src={grad_hat} alt='education' className='h-5 invert'/><h2 className='font-bold text-sm mx-1 md:text-3xl'>University of Warwick</h2></span><p className='font-bold text-xs text-slate-500 md:text-base'>2019-2023</p></div>
+            <div><span className='flex flex-row items-center'><img src={grad_hat} alt='education' className='h-5 md:h-10 invert'/><h2 className='font-bold text-sm mx-1 md:text-3xl'>University of Warwick</h2></span><p className='font-bold text-xs text-slate-500 md:text-base'>2019-2023</p></div>
             <p className='text-xs md:text-base'>MEng - 1st</p>
           </div>
           <div className='flex flex-row justify-between'>
-            <div><span className='flex flex-row items-center'><img src={book} alt='education' className='h-5 invert'/><h2 className='font-bold text-sm mx-2 md:text-3xl'>Northampton School for Boys</h2></span><p className='italic text-xs md:text-base'>Maths, Further Maths, Computer Science</p><p className='font-bold text-xs md:text-base text-slate-500'>2017 - 2019</p></div>
+            <div><span className='flex flex-row items-center'><img src={book} alt='education' className='h-5 md:h-10 invert'/><h2 className='font-bold text-sm mx-2 md:text-3xl'>Northampton School for Boys</h2></span><p className='italic text-xs md:text-base'>Maths, Further Maths, Computer Science</p><p className='font-bold text-xs md:text-base text-slate-500'>2017 - 2019</p></div>
             <p className='text-xs md:text-base'>A-Levels - A*, A*, A*</p>
           </div>
           <div className='flex flex-col'>
@@ -38,7 +38,7 @@ function About( {landingAnimation, setLandingAnimation, showcaseAnimation, setSh
         <div>
           <h1 className='font-bold text-3xl border-b-2 mb-2 w-fit md:text-6xl'>Personal</h1>
           <div className='mt-5 mb-10'>
-            <span className='flex flex-row items-center'><img src={sakura} alt='japan' className='h-10'/><h2 className='font-bold text-sm mx-2 md:text-3xl'>Japanese</h2></span>
+            <span className='flex flex-row items-center'><img src={sakura} alt='japan' className='h-5 md:h-10'/><h2 className='font-bold text-sm mx-2 md:text-3xl'>Japanese</h2></span>
             <p className='text-xs md:text-base'>I started learning Japanese in high school, but started taking it more seriously in university. I took two courses, one in my second year and again in my third year. I finished with my proficiency equivalent to N3 on the Japanese Language Proficiency Test (JLPT). I would have continued into my fourth year, but felt a little overwhelmed with my workload. I've now started learning it again, and hope to achieve N1 eventually.</p>
           </div>
           {/*
