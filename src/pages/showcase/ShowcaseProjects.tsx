@@ -1,4 +1,4 @@
-import { useState, Dispatch, SetStateAction, useEffect } from 'react'
+import { useState, Dispatch, SetStateAction, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Tag from '../../components/Tag'
 import * as data from '../../data.json'
@@ -29,21 +29,37 @@ export default function ShowcaseProjects( {filteredTags, filteredProjects, setFi
 
   const [active, setActive] = useState(0)
   const [direction, setDirection] = useState(1)
+  const [projectChanged, setProjectChanged] = useState(false)
+  const newDirection = useRef(1)
 
   const onClickLeft = () => {
-    setDirection(-1)
-    setActive(active => active === 0 ? filteredProjects.length - 1 : active - 1)
+    setProjectChanged(true)
+    newDirection.current = -1
+    setDirection(newDirection.current)
   }
 
   const onClickRight = () => {
-    setDirection(1)
-    setActive(active => active === filteredProjects.length - 1 ? 0: active + 1)
+    setProjectChanged(true)
+    newDirection.current = 1
+    setDirection(newDirection.current)
   }
 
   const variants = {
     right: {opacity: 0, x:"100%"},
     left: {opacity: 0, x:"-100%"},
   }
+
+  useEffect(() => {
+    if (projectChanged === true && direction === newDirection.current) {
+      if (direction === -1) {
+        setActive(active => active === 0 ? filteredProjects.length - 1 : active + direction)
+      }
+      else {
+        setActive(active => active === filteredProjects.length - 1 ? 0 : active + direction)
+      }
+      setProjectChanged(false)
+    }
+  }, [projectChanged, direction])
 
   useEffect(() => {
     const filteredTagsSet = new Set(filteredTags)

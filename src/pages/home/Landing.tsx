@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 import { motion } from "framer-motion"
-import TagList from '../../components/TagList'
+import TagListLanding from '../../components/TagListLanding'
 import FunctionLink from "../../components/FunctionLink"
 import { AnimatorProps } from "../../components/Animation"
 import { Dispatch, SetStateAction, useEffect } from "react"
@@ -39,7 +39,9 @@ export default function Landing( {landingAnimation, setLandingAnimation, showcas
         </div>
       </div>
     
-      <span className="md:w-[50rem] md:px-10 p-2 justify-center"><TagList filteredTags={filteredTags} setFilteredTags={setFilteredTags} redirect={true}/></span>
+      <span className="md:w-[50rem] md:px-10 p-2 justify-center">
+        <TagListLanding filteredTags={filteredTags} setFilteredTags={setFilteredTags} link={'/showcase'} exitAnimation={landingAnimation} setExitAnimation={setLandingAnimation} initialAnimation={showcaseAnimation} setInitialAnimation={setShowcaseAnimation} newExit={{y: "-100%", opacity: 0, transition: {duration: 0.5}}} newInitial={{opacity: 0, y: "100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, y: 0}}/>
+      </span>
       <div className="flex flex-row justify-between md:w-[50rem] w-full md:px-10">
         <FunctionLink link={'/about'} name={'ABOUT'} exitAnimation={landingAnimation} setExitAnimation={setLandingAnimation} initialAnimation={aboutAnimation} setInitialAnimation={setAboutAnimation} newExit={{x: "100%", opacity: 0, transition: {duration: 0.5}}} direction=" rotate-90" newInitial={{opacity: 0, x: "-100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, x: 0}}/>
         <FunctionLink link={'/showcase'} name={'PROJECTS'} exitAnimation={landingAnimation} setExitAnimation={setLandingAnimation} initialAnimation={showcaseAnimation} setInitialAnimation={setShowcaseAnimation} newExit={{y: "-100%", opacity: 0, transition: {duration: 0.5}}} direction="" newInitial={{opacity: 0, y: "100%"}} newAnimate={{opacity: 1, transition: {duration: 0.5}, y: 0}}/>
