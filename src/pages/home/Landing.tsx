@@ -17,6 +17,10 @@ export default function Landing( {landingAnimation, setLandingAnimation, showcas
     setFilteredTags([])
   }, [])
 
+  useEffect(() => {
+    document.title = "Anya's Portfolio - Home"
+  })
+
   const location = useLocation()
 
   return (

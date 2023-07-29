@@ -4,8 +4,14 @@ import { AnimatorProps } from '../../components/Animation'
 import grad_hat from '../../images/grad_hat.png'
 import book from '../../images/book.png'
 import sakura from '../../images/icons8-sakura-48.png'
+import { useEffect } from 'react'
 
 function About( {landingAnimation, setLandingAnimation, showcaseAnimation, setShowcaseAnimation, aboutAnimation, setAboutAnimation, contactAnimation, setContactAnimation} : AnimatorProps) {
+
+  useEffect(() => {
+    document.title = "Anya's Portfolio - About"
+  })
+
   return (
     <>
     <motion.div 

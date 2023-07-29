@@ -4,8 +4,14 @@ import { AnimatorProps } from '../../components/Animation'
 import email_icon from '../../images/icons8-email-50.png'
 import github_icon from '../../images/github-mark-white.png'
 import linkedin_icon from '../../images/LI-In-Bug.png'
+import { useEffect } from 'react'
 
 function Contact( {landingAnimation, setLandingAnimation, showcaseAnimation, setShowcaseAnimation, aboutAnimation, setAboutAnimation, contactAnimation, setContactAnimation} : AnimatorProps ) {
+
+  useEffect(() => {
+    document.title = "Anya's Portfolio - Contact"
+  })
+  
   return (
     <>
     <motion.div 

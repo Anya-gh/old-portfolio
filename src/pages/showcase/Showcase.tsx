@@ -3,7 +3,7 @@ import FunctionLink from "../../components/FunctionLink"
 import TagList from "../../components/TagList"
 import ShowcaseProjects from "./ShowcaseProjects"
 import { AnimatorProps } from "../../components/Animation"
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction, useEffect } from "react"
 import type { Projects } from "./ShowcaseProjects"
 
 interface ShowcaseProps extends AnimatorProps {
@@ -15,6 +15,10 @@ interface ShowcaseProps extends AnimatorProps {
 
 
 export default function Showcase( {landingAnimation, setLandingAnimation, showcaseAnimation, setShowcaseAnimation, aboutAnimation, setAboutAnimation, contactAnimation, setContactAnimation, filteredTags, setFilteredTags, filteredProjects, setFilteredProjects} : ShowcaseProps ) {
+
+  useEffect(() => {
+    document.title = "Anya's Portfolio - Projects"
+  })
 
   return (
     <>
